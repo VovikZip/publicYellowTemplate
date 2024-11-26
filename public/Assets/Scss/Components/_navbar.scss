@@ -1,0 +1,529 @@
+/*====================
+menu Area
+=====================*/
+
+// For Sticky Navigation
+.my__sticky__nav {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: -100px;
+  -webkit-animation: example 0.6s linear 0.2s forwards;
+  animation: example 0.6s linear 0.2s forwards;
+}
+
+@-webkit-keyframes example {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes example {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+// Nav Section
+nav {
+  ul {
+    &.menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      list-style: none;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      > li {
+        margin: 0 15px;
+        position: relative;
+        @media #{$lg-device} {
+          margin: 0 12px;
+        }
+        > a {
+          -webkit-transition: all 0.2s linear;
+          -o-transition: all 0.2s linear;
+          transition: all 0.2s linear;
+          color: #333;
+          font-size: 16px;
+          font-weight: 500;
+          padding: 20px 0;
+          display: inline-block;
+        }
+        > ul {
+          &.subMenu {
+            list-style: none;
+            min-width: 240px;
+            height: auto;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 90;
+            opacity: 0;
+            visibility: hidden;
+            background-color: #fff;
+            -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+            padding: 12px 0;
+            border-radius: 4px;
+            li {
+              a {
+                font-weight: 500;
+                padding: 10px 20px;
+                font-size: 14px;
+                display: block;
+                color: #333;
+                margin: 0 10px;
+                border-radius: 3px;
+                -webkit-transition: all 0.2s linear;
+                -o-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+              }
+              &:hover {
+                a {
+                  color: #fff;
+                  background: var(--theme_color);
+                }
+              }
+            }
+          }
+        }
+        &:hover {
+          @media #{$xl-device} {
+            > ul {
+              &.subMenu {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          > a {
+            color: var(--color-primary);
+          }
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.HumbuggerMenu {
+  span {
+    &.text-white {
+      color: #c6c9d8 !important;
+    }
+  }
+}
+
+/*-----------------------------
+      MObile Menu Style Css
+  -------------------------------*/
+
+nav {
+  @media #{$lg-device} {
+    position: absolute;
+  }
+  @media #{$md-device} {
+    position: absolute;
+  }
+  @media #{$sm-device} {
+    position: absolute;
+  }
+  ul {
+    &.menu {
+      @media #{$lg-device} {
+        width: 80vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        z-index: 99;
+        padding: 80px 30px;
+        background: #ffffff;
+        -webkit-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+        -o-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+        transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+        display: block;
+        overflow-y: auto;
+      }
+      @media #{$md-device} {
+        width: 80vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        z-index: 99;
+        padding: 80px 30px;
+        background: #ffffff;
+        -webkit-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+        -o-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+        transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+        display: block;
+        overflow-y: auto;
+      }
+      @media #{$sm-device} {
+        width: 80vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        z-index: 99;
+        padding: 80px 30px;
+        background: #ffffff;
+        -webkit-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+        -o-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+        transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+        display: block;
+        overflow-y: auto;
+      }
+
+      li {
+        @media #{$lg-device} {
+          margin: 0;
+          padding: 10px 0;
+        }
+        @media #{$md-device} {
+          margin: 0;
+          padding: 10px 0;
+        }
+
+        @media #{$sm-device} {
+          margin: 0;
+          padding: 10px 0;
+        }
+        &.root__dropdown {
+          @media #{$lg-device} {
+            position: relative;
+          }
+          @media #{$md-device} {
+            position: relative;
+          }
+
+          @media #{$sm-device} {
+            position: relative;
+          }
+
+          > a {
+            @media #{$lg-device} {
+              position: relative;
+              &::after {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7px 7px 0 7px;
+                border-color: #1f1f25 transparent transparent transparent;
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                -webkit-transition: all 0.3s
+                  cubic-bezier(0.645, 0.045, 0.355, 1);
+                -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                background: transparent;
+                left: auto;
+              }
+              &.open {
+                color: var(--color-primary);
+                &::after {
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                  border-width: 0 7px 7px 7px;
+                  border-color: transparent transparent #333 transparent;
+                }
+              }
+            }
+            @media #{$md-device} {
+              position: relative;
+              &::after {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7px 7px 0 7px;
+                border-color: #1f1f25 transparent transparent transparent;
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                -webkit-transition: all 0.3s
+                  cubic-bezier(0.645, 0.045, 0.355, 1);
+                -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                background: transparent;
+                left: auto;
+              }
+              &.open {
+                color: var(--color-primary);
+                &::after {
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                  border-width: 0 7px 7px 7px;
+                  border-color: transparent transparent #333 transparent;
+                }
+              }
+            }
+            @media #{$sm-device} {
+              position: relative;
+              &::after {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7px 7px 0 7px;
+                border-color: #1f1f25 transparent transparent transparent;
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                -webkit-transition: all 0.3s
+                  cubic-bezier(0.645, 0.045, 0.355, 1);
+                -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                background: transparent;
+                left: auto;
+              }
+              &.open {
+                color: var(--color-primary);
+                &::after {
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                  border-width: 0 7px 7px 7px;
+                  border-color: transparent transparent #333 transparent;
+                }
+              }
+            }
+          }
+        }
+        a {
+          @media #{$lg-device} {
+            padding: 0;
+            display: block;
+            font-size: 20px;
+          }
+          @media #{$md-device} {
+            padding: 0;
+            display: block;
+            font-size: 20px;
+          }
+          @media #{$sm-device} {
+            padding: 0;
+            display: block;
+            font-size: 20px;
+          }
+        }
+        ul {
+          &.subMenu {
+            @media #{$lg-device} {
+              position: relative;
+              height: 0;
+              -webkit-transition: 0.3s;
+              -o-transition: 0.3s;
+              transition: 0.3s;
+              padding: 0;
+              opacity: 0;
+              visibility: hidden;
+              background: transparent;
+              -webkit-box-shadow: inherit;
+              box-shadow: inherit;
+            }
+            @media #{$md-device} {
+              position: relative;
+              height: 0;
+              -webkit-transition: 0.3s;
+              -o-transition: 0.3s;
+              transition: 0.3s;
+              padding: 0;
+              opacity: 0;
+              visibility: hidden;
+              background: transparent;
+              -webkit-box-shadow: inherit;
+              box-shadow: inherit;
+            }
+            @media #{$sm-device} {
+              position: relative;
+              height: 0;
+              -webkit-transition: 0.3s;
+              -o-transition: 0.3s;
+              transition: 0.3s;
+              padding: 0;
+              opacity: 0;
+              visibility: hidden;
+              background: transparent;
+              -webkit-box-shadow: inherit;
+              box-shadow: inherit;
+            }
+            li {
+              @media #{$lg-device} {
+                padding: 3px 0;
+              }
+              @media #{$md-device} {
+                padding: 3px 0;
+              }
+              @media #{$sm-device} {
+                padding: 3px 0;
+              }
+              a {
+                @media #{$lg-device} {
+                  font-size: 20px;
+                  padding: 6px 10px;
+                }
+                @media #{$md-device} {
+                  font-size: 20px;
+                  padding: 6px 10px;
+                }
+                @media #{$sm-device} {
+                  font-size: 20px;
+                  padding: 6px 10px;
+                }
+              }
+            }
+            &.active {
+              @media #{$lg-device} {
+                height: 100%;
+                padding: 12px 0;
+                opacity: 1;
+                visibility: visible;
+              }
+              @media #{$md-device} {
+                height: 100%;
+                padding: 12px 0;
+                opacity: 1;
+                visibility: visible;
+              }
+              @media #{$sm-device} {
+                height: 100%;
+                padding: 12px 0;
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+        }
+        a {
+          @media #{$lg-device} {
+            //   color: $heading-color;
+          }
+          @media #{$md-device} {
+            //   color: $heading-color;
+          }
+          @media #{$sm-device} {
+            //   color: $heading-color;
+          }
+        }
+      }
+    }
+  }
+}
+.close-menu {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -10;
+  @media #{$lg-device} {
+    top: 20px;
+    right: 58px;
+  }
+  @media #{$md-device} {
+    top: 20px;
+    right: 58px;
+  }
+  @media #{$sm-device} {
+    top: 25px;
+    right: 15px;
+  }
+}
+.menu-open {
+  .close-menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+    span {
+      font-size: 40px;
+      cursor: pointer;
+    }
+  }
+  .HumbuggerMenu {
+    visibility: hidden;
+    opacity: 0;
+  }
+  nav {
+    ul {
+      &.menu {
+        @media #{$lg-device} {
+          right: -1px;
+        }
+        @media #{$md-device} {
+          right: -1px;
+        }
+        @media #{$sm-device} {
+          right: -1px;
+        }
+        @media #{$lg-device} {
+          width: 86vw;
+          padding: 80px 45px;
+        }
+        @media #{$md-device} {
+          width: 86vw;
+          padding: 80px 45px;
+        }
+        @media #{$sm-device} {
+          width: 86vw;
+          padding: 90px 30px;
+        }
+      }
+    }
+  }
+}
+
+/*------------------------
+      Hamburger Menu
+  ---------------------------*/
+.HumbuggerMenu {
+  span {
+    cursor: pointer;
+    @media #{$lg-device} {
+      font-size: 28px;
+    }
+    @media #{$md-device} {
+      font-size: 28px;
+    }
+    @media #{$sm-device} {
+      font-size: 40px;
+    }
+  }
+}
+navbar.menu-open .HumbuggerMenu span {
+  opacity: 0;
+}

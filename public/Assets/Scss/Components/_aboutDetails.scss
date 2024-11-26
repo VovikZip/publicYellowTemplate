@@ -1,0 +1,37 @@
+.aboutDetails {
+  .img__section {
+    .shape_1 {
+      position: absolute;
+      top: -47px;
+      left: -44px;
+      z-index: -1;
+      @media #{$md-device} {
+        top: -46px;
+        left: -45px;
+      }
+    }
+    .shape_2 {
+      position: absolute;
+      top: -50px;
+      right: -102px;
+      z-index: 10;
+      @media #{$sm-device} {
+        top: -78px;
+        right: 11px;
+      }
+    }
+    .text_shape {
+      position: absolute;
+      top: -38px;
+      right: -42px;
+      z-index: 10;
+      -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      transform: rotate(-5deg);
+      @media #{$sm-device} {
+        top: -68px;
+        right: 87px;
+      }
+    }
+  }
+}

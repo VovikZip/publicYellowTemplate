@@ -1,0 +1,65 @@
+.faqSection {
+  .itemOverview {
+    .react-tabs__tab-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      border: none;
+      margin: 0;
+      padding: 0;
+      @media #{$md-device} {
+        display: block;
+      }
+      @media #{$sm-device} {
+        display: block;
+      }
+    }
+
+    .react-tabs__tab {
+      border: 1px solid #e9ecef !important;
+      border-radius: 5px;
+      padding: 12px 30px;
+      color: #77838f;
+      margin-right: 20px;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+      cursor: pointer;
+      @media #{$lg-device} {
+        margin-bottom: 10px;
+      }
+      @media #{$md-device} {
+        margin-bottom: 10px;
+        display: inline-block;
+        padding: 12px 18px;
+      }
+      @media #{$sm-device} {
+        margin-bottom: 10px;
+        display: inline-block;
+        padding: 12px 18px;
+      }
+    }
+
+    .react-tabs__tab:hover,
+    .react-tabs__tab--selected {
+      background: #f16126;
+      border-radius: 5px;
+      padding: 12px 30px;
+      color: #fff;
+      @media #{$md-device} {
+        display: inline-block;
+        padding: 12px 18px;
+      }
+      @media #{$sm-device} {
+        display: inline-block;
+        padding: 12px 18px;
+      }
+    }
+    .react-tabs__tab-panel {
+      margin-top: 50px;
+      @media #{$md-device} {
+        margin-top: 30px;
+      }
+    }
+  }
+}

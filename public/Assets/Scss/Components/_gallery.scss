@@ -1,0 +1,60 @@
+.gallery {
+  .img__file {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    @media #{$sm-device} {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+    }
+  }
+  img {
+    height: auto !important;
+    max-width: 100% !important;
+  }
+  .single__img {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0 !important;
+      left: 0 !important;
+      width: 100%;
+      height: 100%;
+      background: #333;
+      opacity: 0;
+      z-index: 0;
+      -webkit-transition: all 0.32s linear;
+      -o-transition: all 0.32s linear;
+      transition: all 0.32s linear;
+    }
+    .shape {
+      visibility: hidden;
+      opacity: 0;
+      left: 50% !important;
+      top: 50% !important;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      cursor: pointer;
+      color: #fff;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0.7;
+      }
+      .shape {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.ReactModal__Overlay--after-open {
+  z-index: 9999 !important;
+}

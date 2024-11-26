@@ -1,0 +1,76 @@
+/*********************************************************************************
+
+	Template Name: Next LMS - Professional LMS Online Education Course React Template
+	Note: This is style css.
+
+**********************************************************************************/
+
+/**************************************************************
+
+	STYLESHEET INDEXING
+
+	|
+	|___ Default Styles
+	|	|
+	|	|___ variable
+	|	|___ reset
+	|	|___ button
+	|	|___ animation
+	|	|___ loader
+	|
+	|___ Components Styles
+	|	|___ topHeader
+	|	|___ navbar
+	|	|___ heroSection
+	|	|___ featureCourses
+	|	|___ trendingCategories
+	|	|___ map
+	|	|___ event
+	|	|___ courseAdvisor
+	|	|___ blogSection
+	|	|___ studentsSays
+	|	|___ introSection
+	|	|___ aboutDetails
+	|	|___ coursesDetails
+	|	|___ react-accessible-accordion
+	|	|___ faqSection
+	|	|___ scrollToTop
+	|	|___ gallery
+	|	|___ modalVideo
+	|
+
+	|___ END STYLESHEET INDEXING
+
+***************************************************************/
+
+/**************************************
+    Default Styles
+***************************************/
+
+@import "Common/variable";
+@import "Common/reset";
+@import "Common/button";
+@import "Common/animation";
+@import "Common/loader";
+
+/**************************************
+    Components Styles
+***************************************/
+@import "Components/topHeader";
+@import "Components/navbar";
+@import "Components/heroSection";
+@import "Components/featureCourses";
+@import "Components/trendingCategories";
+@import "Components/map";
+@import "Components/event";
+@import "Components/courseAdvisor";
+@import "Components/blogSection";
+@import "Components/studentsSays";
+@import "Components/introSection";
+@import "Components/aboutDetails";
+@import "Components/coursesDetails";
+@import "Components/react-accessible-accordion";
+@import "Components/faqSection";
+@import "Components/scrollToTop";
+@import "Components/gallery";
+@import "Components/modalVideo";

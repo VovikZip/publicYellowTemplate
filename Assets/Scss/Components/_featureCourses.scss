@@ -1,0 +1,17 @@
+.featureCourses {
+  .itemContainer {
+    &:hover {
+      .img__file img {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+    }
+  }
+  .slick-dots li.slick-active button:before {
+    color: #f16126;
+  }
+  .slick-dots li button:before {
+    color: #f16126;
+  }
+}
